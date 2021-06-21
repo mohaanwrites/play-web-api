@@ -8,13 +8,14 @@ namespace play_web_api.Services
     public static class PatientService
     {
         public static List<Patient> patientList;
-        private static int Identifier = 1004;
+        private static int Identifier = 1005;
         static PatientService()
         {
             patientList = new List<Patient>();
             patientList.Add(new() { PatientId = 1001, FirstName = "Venkatesan", LastName = "Rajendran" });
             patientList.Add(new() { PatientId = 1002, FirstName = "Harish", LastName = "Unnikrishnan" });
             patientList.Add(new() { PatientId = 1003, FirstName = "Saravanan", LastName = "Devarajan" });
+            patientList.Add(new() { PatientId = 1004, FirstName = "David", LastName = "Pradeep" });
         }
 
         public static IEnumerable<Patient> ReadAllPatients() => patientList.AsReadOnly();
